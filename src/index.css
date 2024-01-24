@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer {
+    .navlink{
+        padding: 0 3px;
+        @apply py-2;
+    }
+}
