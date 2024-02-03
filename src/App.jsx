@@ -1,23 +1,22 @@
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import Home from './pages/Home';
-import RootLayout from './layout/RootLayout';
+// pages
+import Main from './components/home/Main';
+import Courses from './components/home/Courses';
+import Navbar from './components/home/Navbar';
+import Teachers from './components/home/Teachers';
+import AboutUs from './components/home/AboutUs';
+import Contact from './components/home/Contact';
 
 function App() {
-
-  const routes = createBrowserRouter([
-    {
-      path: '/',
-      element: <RootLayout />,
-      children: [
-        {
-          index: true,
-          element: <Home />
-        }
-      ]
-    }
-  ])
-
-  return <RouterProvider router={routes} />
+  return (
+    <>
+      <Navbar />
+      <Main />
+      <Courses />
+      <Teachers />
+      <AboutUs />
+      <Contact />
+    </>
+  )
 }
 
 export default App

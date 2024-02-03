@@ -3,8 +3,23 @@
 @tailwind utilities;
 
 @layer {
-    .navlink{
+    .navlink {
         padding: 0 3px;
-        @apply py-2;
+        @apply py-2 font-semibold uppercase;
     }
+    .site-container {
+        @apply w-full max-w-screen-xl mx-auto px-5;
+    }
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.a {
+    text-shadow: 0.5px 0.5px 3px;
+}
+
+.b {
+    background: rgba(0, 0, 0, 0.5);
 }
