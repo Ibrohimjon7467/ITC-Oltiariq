@@ -1,22 +1,36 @@
-// pages
-import Main from './components/home/Main';
-import Courses from './components/home/Courses';
-import Navbar from './components/home/Navbar';
-import Teachers from './components/home/Teachers';
-import AboutUs from './components/home/AboutUs';
-import Contact from './components/home/Contact';
+// rrd
+import { createBrowserRouter, RouterProvider } from "react-router-dom"
+import Home from './pages/Home';
+import RootLayout from './layout/RootLayout';
+import Admin from './pages/Admin';
+import AdminLayout from './layout/AdminLayout';
 
 function App() {
-  return (
-    <>
-      <Navbar />
-      <Main />
-      <Courses />
-      <Teachers />
-      <AboutUs />
-      <Contact />
-    </>
-  )
+
+  const routes = createBrowserRouter([
+    {
+      path: "/",
+      element: <RootLayout />,
+      children: [
+        {
+          index: true,
+          element: <Home />
+        },
+      ],
+    },
+    {
+      path: "/admin",
+      element: <AdminLayout />,
+      children: [
+        {
+          index: true,
+          element: <Admin />
+        },
+      ],
+    },
+  ])
+
+  return <RouterProvider router={routes} />
 }
 
 export default App

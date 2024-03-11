@@ -6,7 +6,7 @@ export default {
   ],
 
   presets: [],
-  darkMode: 'media', // or 'class'
+  darkMode: 'class',
   theme: {
     accentColor: ({ theme }) => ({
       ...theme('colors'),

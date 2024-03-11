@@ -1,8 +1,10 @@
-import { useEffect, useState } from 'react'
 import logo from '../../../public/logo.png'
+import { Link } from 'react-router-dom';
+import { useEffect, useState } from 'react'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 function Navbar() {
+
     const [theme, setTheme] = useState(localStorage.getItem("theme") ? localStorage.getItem("theme") : "garden")
 
     useEffect(() => {
@@ -20,20 +22,26 @@ function Navbar() {
     }
 
     return (
-        <div className='py-3 w-full bg-slate-800 bg-opacity-95 fixed top-0'>
-            <div className='text-xs site-container flex items-center justify-between'>
+        <div className='py-3 w-full bg-slate-800 bg-opacity-95 z-[100] fixed top-0'>
+            <div className='text-xs site-container flex items-center justify-between jcc'>
                 <div className='flex items-center gap-x-3'>
-                    <a href='/'><img className='w-[55px] h-[55px]' src={logo} alt="itc logo" /></a>
+                    <Link to='/'><img className='w-[40px] md:w-[55px] h-[40px] md:h-[55px]' src={logo} alt="itc logo" /></Link>
                     <div className='flex flex-col gap-[3px] uppercase'>
-                        <h2 className='text-[20px] font-bold text-white'>it center</h2>
-                        <span className='text-xs font-semibold text-gray-200'>oltiariq</span>
+                        <h2 className='md:text-[20px] text-[17px] font-bold text-white'>it center</h2>
+                        <span className='md:text-[14px] text-[12px] font-semibold text-gray-200'>oltiariq</span>
                     </div>
                 </div>
-                <AnchorLink href='#home' offset='150' className='navlink text-gray-300'>ГЛАВНАЯ</AnchorLink>
-                <AnchorLink href='#courses' offset='85' className='navlink text-gray-300'>КУРСЫ</AnchorLink>
-                <AnchorLink href='#teachers' offset='88' className='navlink text-gray-300'>учителя</AnchorLink>
-                <AnchorLink href='#about-us' offset='88' className='navlink text-gray-300'>О НАС</AnchorLink>
-                <AnchorLink href='#contact' offset='88' className='navlink text-gray-300'>Контакт</AnchorLink>
+
+                <div className='flex items-center gap-7 nav'>
+                    <AnchorLink href='#home' offset='150' className='navlink text-gray-300'>главная</AnchorLink>
+                    <AnchorLink href='#courses' offset='100' className='navlink text-gray-300'>курсы</AnchorLink>
+                    <AnchorLink href='#teachers' offset='100' className='navlink text-gray-300'>учителя</AnchorLink>
+                    <AnchorLink href='#about-us' offset='100' className='navlink text-gray-300'>о нас</AnchorLink>
+                    <AnchorLink href='#write-to-us' offset='100' className='navlink text-gray-300'>напешите нам</AnchorLink>
+                    <AnchorLink href='#contact' offset='100' className='navlink text-gray-300'>контакт</AnchorLink>
+                </div>
+
+                {/* theme */}
                 <div className='flex-none'>
                     <label className="swap swap-rotate">
                         <input type="checkbox" onChange={handleToggle} checked={theme === 'garden' ? false : true} />
@@ -41,6 +49,7 @@ function Navbar() {
                         <svg className="swap-off fill-current w-[20px] h-[20px] text-gray-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" /></svg>
                     </label>
                 </div>
+
             </div>
         </div>
     )

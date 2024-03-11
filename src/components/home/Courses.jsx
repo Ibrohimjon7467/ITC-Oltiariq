@@ -1,9 +1,109 @@
+import html from "../../images/html-5-logo.svg"
 
 function Courses() {
   return (
-    <div id='courses' className='site-container mb-10'>
-        <h1 className='text-3xl mb-2'>Courses</h1>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe perspiciatis, fuga hic dolores aliquid velit id libero non ratione beatae incidunt qui officia omnis quia corrupti necessitatibus temporibus sit, iste consequatur ut repellat amet distinctio illo consectetur. Rerum, minus? Odio, facilis. Dolorem quaerat pariatur corporis facilis laborum beatae omnis quibusdam laudantium molestiae esse. Error maiores quidem similique sit molestias neque odio repellendus libero provident tempora! Soluta quas fugiat nulla accusantium, accusamus totam nihil officia omnis harum perspiciatis fugit doloremque rerum ut ab repellendus modi sint atque facilis tempore illo quo neque dolorem pariatur! Vitae debitis officiis at non recusandae accusantium repellat explicabo minima omnis dolore perferendis officia asperiores, dolor cum nobis error. Quae quas doloribus molestias harum nisi eos laborum accusamus in neque deserunt facere, culpa assumenda. Inventore repellat voluptatem sint? Beatae quia officia earum sapiente expedita architecto nobis minima vitae praesentium ab dolorem labore illum, voluptas mollitia suscipit hic pariatur veniam modi deserunt, sit culpa rem? Provident quam quibusdam quod totam ab deserunt, blanditiis eius consequuntur? Blanditiis beatae fugiat laboriosam accusamus tenetur quis accusantium ex voluptatum consectetur odit inventore aliquam illum sapiente, maiores impedit iure cum! Reprehenderit eos, esse commodi fuga minima vitae, autem praesentium quaerat, labore recusandae ab!</p>
+    <div id='courses' className='site-container mb-10 mt-20'>
+      <h1 className='text-4xl font-extrabold mb-20 line text-[#A8A5A8]'>НАШИ КУРСЫ</h1>
+      <div className="flex flex-wrap justify-between">
+        <div className="mb-10">
+          <div className="flex items-center gap-6">
+            <div><img className="w-12" src={html} alt="html-logo" /></div>
+            <div className="flex flex-col text-[#2a284f]">
+              <h4 className="text-xl font-bold">Курс «Веб-программирование»</h4>
+              <span className="badge badge-secondary border-none text-[#2A284F] bg-[#7DBA28] rounded-[0.2rem] p-2 text-[0.60rem] font-semibold mt-4">6 месяцев</span>
+              <span>
+                <p className="text-[1rem] font-bold mt-2">Необходимый уровень:</p>
+                <p className="text-[1rem] font-thin">Курс для начинающих</p>
+              </span>
+              <div className="flex items-center text-[1rem] font-bold">
+                <div className="my-3">Ближайшая группа:&nbsp;</div>
+                <div>Февраль 2024г.</div>
+              </div>
+              <div>
+                <p className="text-[1rem] font-bold">Стоимость за месяц:</p>
+                <div>
+                  <div className="badge badge-primary border-none text-white text-base rounded-md py-3 px-2 mt-2 font-semibold bg-[#7DBA28]">400 000 сум</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="mb-10">
+          <div className="flex items-center gap-5">
+            <div>
+              <img className="w-12" src={html} alt="html-logo" />
+            </div>
+            <div className="flex flex-col text-[#2a284f]">
+              <h4 className="text-xl font-bold">Курс «Веб-программирование»</h4>
+              <span className="badge badge-secondary border-none text-[#2A284F] bg-[#7DBA28] rounded-[0.2rem] p-2 text-[0.60rem] font-semibold mt-4">6 месяцев</span>
+              <span>
+                <p className="text-[1rem] font-bold mt-2">Необходимый уровень:</p>
+                <p className="text-[1rem] font-thin">Курс для начинающих</p>
+              </span>
+              <div className="flex items-center text-[1rem] font-bold">
+                <div className="my-3">Ближайшая группа:&nbsp;</div>
+                <div>Февраль 2024г.</div>
+              </div>
+              <div>
+                <p className="text-[1rem] font-bold">Стоимость за месяц:</p>
+                <div>
+                  <div className="badge badge-primary border-none text-white text-base rounded-md py-3 px-2 mt-2 font-semibold bg-[#7DBA28]">400 000 сум</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="mb-10">
+          <div className="flex items-center gap-5">
+            <div>
+              <img className="w-12" src={html} alt="html-logo" />
+            </div>
+            <div className="flex flex-col text-[#2a284f]">
+              <h4 className="text-xl font-bold">Курс «Веб-программирование»</h4>
+              <span className="badge badge-secondary border-none text-[#2A284F] bg-[#7DBA28] rounded-[0.2rem] p-2 text-[0.60rem] font-semibold mt-4">6 месяцев</span>
+              <span>
+                <p className="text-[1rem] font-bold mt-2">Необходимый уровень:</p>
+                <p className="text-[1rem] font-thin">Курс для начинающих</p>
+              </span>
+              <div className="flex items-center text-[1rem] font-bold">
+                <div className="my-3">Ближайшая группа:&nbsp;</div>
+                <div>Февраль 2024г.</div>
+              </div>
+              <div>
+                <p className="text-[1rem] font-bold">Стоимость за месяц:</p>
+                <div>
+                  <div className="badge badge-primary border-none text-white text-base rounded-md py-3 px-2 mt-2 font-semibold bg-[#7DBA28]">400 000 сум</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="mb-10">
+          <div className="flex items-center gap-5">
+            <div>
+              <img className="w-12" src={html} alt="html-logo" />
+            </div>
+            <div className="flex flex-col text-[#2a284f]">
+              <h4 className="text-xl font-bold">Курс «Веб-программирование»</h4>
+              <span className="badge badge-secondary border-none text-[#2A284F] bg-[#7DBA28] rounded-[0.2rem] p-2 text-[0.60rem] font-semibold mt-4">6 месяцев</span>
+              <span>
+                <p className="text-[1rem] font-bold mt-2">Необходимый уровень:</p>
+                <p className="text-[1rem] font-thin">Курс для начинающих</p>
+              </span>
+              <div className="flex items-center text-[1rem] font-bold">
+                <div className="my-3">Ближайшая группа:&nbsp;</div>
+                <div>Февраль 2024г.</div>
+              </div>
+              <div>
+                <p className="text-[1rem] font-bold">Стоимость за месяц:</p>
+                <div>
+                  <div className="badge badge-primary border-none text-white text-base rounded-md py-3 px-2 mt-2 font-semibold bg-[#7DBA28]">400 000 сум</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   )
 }
